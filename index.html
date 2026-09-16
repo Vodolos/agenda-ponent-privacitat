@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Política de privacitat de l'aplicació Agenda Ponent.">
+<title>Política de privacitat — Agenda Ponent</title>
+<style>
+  :root {
+    --bg: #FBF7F0;
+    --text: #2B2320;
+    --muted: #6B6058;
+    --accent: #B03D0C;
+    --card: #FFFFFF;
+    --border: #E7DFD3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1C1613;
+      --text: #F2E9DC;
+      --muted: #B8AA9A;
+      --accent: #F2A65A;
+      --card: #26201C;
+      --border: #3A312B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1C1613;
+    --text: #F2E9DC;
+    --muted: #B8AA9A;
+    --accent: #F2A65A;
+    --card: #26201C;
+    --border: #3A312B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 96px; }
+  header { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--accent); }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; }
+  .version { color: var(--muted); font-size: 0.9rem; font-family: system-ui, -apple-system, sans-serif; }
+  .lang-toggle { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; font-family: system-ui, -apple-system, sans-serif; }
+  .lang-toggle button {
+    background: var(--card); border: 1px solid var(--border); color: var(--text);
+    padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--accent); color: #FFF6EA; border-color: var(--accent); }
+  /* Sin JavaScript se ven los dos idiomas: la política tiene que poder
+     leerse siempre, también desde el lector que use Google al revisarla. */
+  .js section { display: none; }
+  .js section.active { display: block; }
+  section + section { margin-top: 48px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; color: var(--accent); scroll-margin-top: 24px; }
+  h3 { font-size: 1rem; margin: 20px 0 4px; }
+  p, li { word-break: break-word; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .box {
+    margin-top: 8px; padding: 14px 16px; background: var(--card);
+    border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 4px;
+  }
+  .box p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.85rem; font-family: system-ui, -apple-system, sans-serif;
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Política de privacitat · Política de privacidad</h1>
+    <div class="version">Agenda Ponent · Versió 2 · 16-09-2026</div>
+    <div class="lang-toggle" hidden>
+      <button type="button" id="btn-ca" class="active" onclick="showLang('ca')">Català</button>
+      <button type="button" id="btn-es" onclick="showLang('es')">Castellano</button>
+    </div>
+  </header>
+
+  <section id="ca" lang="ca" class="active">
+    <p><strong>Agenda Ponent</strong> és una aplicació per a Android que recull en un sol lloc l'agenda d'activitats del Segrià, el Pla d'Urgell i la Noguera a partir de fonts públiques.</p>
+
+    <h2>Qui és el responsable</h2>
+    <p>Javier Guerrero Moreno, que desenvolupa l'aplicació a títol personal. Contacte per a qualsevol qüestió de privacitat: <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>.</p>
+
+    <h2>El principi</h2>
+    <p>No guardem cap dada que no sigui necessària per a una funció que tu fas servir. Per consultar l'agenda no cal compte i no es recull cap dada personal.</p>
+
+    <h2>Quines dades tractem i per a què</h2>
+
+    <h3>Compte (opcional)</h3>
+    <p>Només cal per desar preferits i per publicar activitats. S'entra amb el compte de Google del mòbil, així que no guardem cap contrasenya. Del teu compte desem únicament un <strong>identificador intern</strong> i la teva <strong>adreça de correu</strong>. En iniciar sessió, Google també ens envia el teu nom i la foto del compte: <strong>s'esborren en el moment d'arribar</strong> i no es desen enlloc. Google sap que has entrat a aquesta aplicació.</p>
+
+    <h3>Preferits</h3>
+    <p>Si deses una activitat com a preferida, guardem quin compte l'ha desada, per poder-te-la mostrar a qualsevol mòbil on iniciïs sessió. <strong>S'esborra sola una setmana després que l'activitat s'hagi acabat</strong>, també del servidor: no volem un historial de a quines activitats has anat.</p>
+
+    <h3>Recordatoris</h3>
+    <p>Venen desactivats. Si els actives, el mòbil t'avisa un cop al dia de les preferides de l'endemà. L'avís el prepara el teu propi telèfon amb les dades que ja té: no s'envia res enlloc. Android et demanarà permís per mostrar notificacions i el pots retirar quan vulguis.</p>
+
+    <h3>Activitats que publiques</h3>
+    <p>Guardem el que escrius (títol, dates, hora, descripció, lloc, preu) i quin compte l'ha publicada, perquè la puguis esborrar. <strong>Es publica al moment i és visible per a tothom</strong>; la revisem després i la podem retirar si incompleix les normes. No hi escriguis dades personals de tercers.</p>
+
+    <h3>Avisos d'error en una activitat</h3>
+    <p>Si ens avises que una dada d'una activitat no és correcta, guardem el motiu que tries, el text que hi afegeixis i de quina activitat es tracta. No cal compte. Si has iniciat sessió, l'avís queda associat al teu compte.</p>
+
+    <h3>Avisos de problemes de l'app</h3>
+    <p>Si ens avises d'un problema de l'aplicació, guardem el motiu, el que expliquis i tres dades tècniques: la <strong>versió de l'app</strong>, la <strong>versió d'Android</strong> i l'<strong>idioma</strong> en què la fas servir. No guardem el model del mòbil ni cap identificador del dispositiu. No cal compte.</p>
+    <p>Els avisos i les activitats publicades arriben a Javier com a incidències en un repositori privat de GitHub, amb l'identificador intern del compte quan n'hi ha. <strong>El correu no s'hi inclou mai.</strong></p>
+
+    <h3>Afegir al calendari</h3>
+    <p>Aquesta opció obre la teva aplicació de calendari amb l'activitat ja emplenada i ets tu qui decideix si la desa. L'app <strong>no demana permís per accedir al calendari</strong> i no en pot llegir res.</p>
+
+    <h3>Dades desades al mòbil</h3>
+    <p>L'app desa al teu telèfon l'agenda descarregada (per funcionar sense connexió), els teus preferits, l'idioma triat i la sessió oberta. Esborrar les dades de l'app o desinstal·lar-la ho elimina tot del mòbil.</p>
+
+    <h2>Traducció al castellà</h2>
+    <p>Les activitats es publiquen en català i la versió en castellà la preparem nosaltres abans que arribi a l'app: el text de les activitats (títol, descripció i preu) s'envia a <strong>Google Cloud Translation</strong> i es desa ja traduït. <strong>Això inclou les activitats que publiques tu</strong>, però cap dada del teu compte: a Google només li arriba el text de l'activitat. Canviar d'idioma a l'app no envia res enlloc.</p>
+
+    <h2>Publicitat i compra "Sense anuncis"</h2>
+    <p>Aquest apartat s'aplica a les versions de l'app que mostrin publicitat.</p>
+    <p>L'app pot mostrar un bàner de <strong>Google AdMob</strong> en el mode d'anuncis limitats, pensat per mostrar anuncis <strong>no personalitzats</strong>: no s'hi fa servir el teu historial ni el que fas dins l'app per triar l'anunci. Encara així, per servir l'anunci, limitar-ne la freqüència i prevenir el frau, Google pot rebre dades tècniques com l'adreça IP i informació del dispositiu. Quan la normativa ho exigeix, l'app et demana el consentiment amb el formulari de Google abans de carregar cap anunci, i el pots canviar després. Pots restablir o eliminar l'identificador de publicitat als ajustos d'Android. Més informació: <a href="https://policies.google.com/technologies/ads" rel="noopener">com utilitza Google les dades a la publicitat</a>.</p>
+    <p>La compra "Sense anuncis" és un pagament únic gestionat íntegrament per <strong>Google Play</strong>. L'app només consulta a Google Play si l'has feta; nosaltres no veiem ni desem cap dada de pagament.</p>
+
+    <h2>Què NO fem</h2>
+    <ul>
+      <li>No fem servir eines d'analítica ni de seguiment del que fas a l'app.</li>
+      <li>No recollim la teva ubicació.</li>
+      <li>No venem dades ni les cedim a ningú per a finalitats comercials.</li>
+    </ul>
+
+    <h2>Qui les tracta per nosaltres</h2>
+    <ul>
+      <li><strong>Supabase</strong>: base de dades i inici de sessió. Les dades es guarden a la Unió Europea (Irlanda). Com qualsevol servei a internet, en conserva registres tècnics (com l'adreça IP) durant un temps limitat per seguretat.</li>
+      <li><strong>Google</strong>: inici de sessió amb el compte de Google, traducció del text de les activitats i, a les versions amb publicitat, AdMob i Google Play.</li>
+      <li><strong>GitHub</strong>: repositori privat on arriben els avisos i les activitats publicades, sense cap correu.</li>
+    </ul>
+    <p>Alguns d'aquests proveïdors poden tractar dades fora de la Unió Europea; ho fan amb les garanties que preveu el Reglament General de Protecció de Dades. Totes les connexions entre l'app i els servidors van xifrades.</p>
+
+    <h2>Base legal</h2>
+    <ul>
+      <li>Compte, preferits, recordatoris, publicació i avisos: prestar-te el servei que tu demanes.</li>
+      <li>Traducció, moderació de les activitats publicades i seguretat: interès legítim a oferir una agenda fiable en tots dos idiomes.</li>
+      <li>Publicitat: el teu consentiment, quan la normativa l'exigeix.</li>
+    </ul>
+
+    <h2>Quant de temps les guardem</h2>
+    <ul>
+      <li>Compte: fins que el demanis eliminar.</li>
+      <li>Preferits: fins a una setmana després de l'activitat.</li>
+      <li>Activitats publicades: fins que les esborris o eliminis el compte.</li>
+      <li>Avisos: el temps necessari per revisar-los i resoldre'ls.</li>
+    </ul>
+
+    <h2>Els teus drets</h2>
+    <p>Pots demanar accedir a les teves dades, rectificar-les, eliminar-les, limitar-ne o oposar-te al tractament i obtenir-ne una còpia, escrivint a <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>. Si creus que no s'han respectat, pots presentar una reclamació davant l'<a href="https://www.aepd.es" rel="noopener">Agència Espanyola de Protecció de Dades</a>.</p>
+
+    <h2 id="dades-elimina">Eliminar el teu compte i les teves dades</h2>
+    <div class="box">
+      <p>Escriu a <a href="mailto:agendaponent.runny812@passinbox.com?subject=Eliminar%20compte">agendaponent.runny812@passinbox.com</a> des del correu del compte de Google amb què vas entrar, amb l'assumpte "Eliminar compte". No cal tenir l'app instal·lada.</p>
+      <p>Eliminarem el compte, els preferits i les activitats que hagis publicat en un termini màxim d'un mes, i t'ho confirmarem per correu. Les dades desades al mòbil s'esborren desinstal·lant l'app.</p>
+    </div>
+
+    <h2>Edat</h2>
+    <p>L'aplicació està pensada per a persones de <strong>13 anys o més</strong> i no s'adreça a menors de 13 anys. Consultar l'agenda no requereix cap dada. Per crear un compte cal tenir 14 anys; si en tens menys, cal el consentiment dels teus pares o tutors.</p>
+
+    <h2>Enllaços a altres webs</h2>
+    <p>Moltes activitats enllacen a la pàgina de la seva font (ajuntaments, la Generalitat…). En obrir-les passes a una web aliena, amb la seva pròpia política de privacitat.</p>
+
+    <h2>Canvis en aquesta política</h2>
+    <p>Si canvia, publicarem la versió nova en aquesta mateixa adreça amb la data actualitzada. Si el canvi afecta les dades que ja tenim, t'ho farem saber abans d'aplicar-lo.</p>
+  </section>
+
+  <section id="es" lang="es">
+    <p><strong>Agenda Ponent</strong> es una aplicación para Android que reúne en un solo lugar la agenda de actividades del Segrià, el Pla d'Urgell y la Noguera a partir de fuentes públicas.</p>
+
+    <h2>Quién es el responsable</h2>
+    <p>Javier Guerrero Moreno, que desarrolla la aplicación a título personal. Contacto para cualquier cuestión de privacidad: <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>.</p>
+
+    <h2>El principio</h2>
+    <p>No guardamos ningún dato que no sea necesario para una función que tú uses. Para consultar la agenda no hace falta cuenta y no se recoge ningún dato personal.</p>
+
+    <h2>Qué datos tratamos y para qué</h2>
+
+    <h3>Cuenta (opcional)</h3>
+    <p>Solo hace falta para guardar favoritos y publicar actividades. Se entra con la cuenta de Google del móvil, así que no guardamos ninguna contraseña. De tu cuenta guardamos únicamente un <strong>identificador interno</strong> y tu <strong>dirección de correo</strong>. Al iniciar sesión, Google también nos envía tu nombre y la foto de la cuenta: <strong>se borran en el momento de llegar</strong> y no se guardan en ningún sitio. Google sabe que has entrado en esta aplicación.</p>
+
+    <h3>Favoritos</h3>
+    <p>Si guardas una actividad como favorita, guardamos qué cuenta la ha guardado, para poder mostrártela en cualquier móvil donde inicies sesión. <strong>Se borra sola una semana después de que la actividad haya terminado</strong>, también del servidor: no queremos un historial de a qué actividades has ido.</p>
+
+    <h3>Recordatorios</h3>
+    <p>Vienen desactivados. Si los activas, el móvil te avisa una vez al día de las favoritas del día siguiente. El aviso lo prepara tu propio teléfono con los datos que ya tiene: no se envía nada a ningún sitio. Android te pedirá permiso para mostrar notificaciones y puedes retirarlo cuando quieras.</p>
+
+    <h3>Actividades que publicas</h3>
+    <p>Guardamos lo que escribes (título, fechas, hora, descripción, lugar, precio) y qué cuenta la ha publicado, para que puedas borrarla. <strong>Se publica al momento y es visible para todo el mundo</strong>; la revisamos después y podemos retirarla si incumple las normas. No escribas datos personales de terceros.</p>
+
+    <h3>Avisos de error en una actividad</h3>
+    <p>Si nos avisas de que un dato de una actividad no es correcto, guardamos el motivo que eliges, el texto que añadas y de qué actividad se trata. No hace falta cuenta. Si has iniciado sesión, el aviso queda asociado a tu cuenta.</p>
+
+    <h3>Avisos de problemas de la app</h3>
+    <p>Si nos avisas de un problema de la aplicación, guardamos el motivo, lo que expliques y tres datos técnicos: la <strong>versión de la app</strong>, la <strong>versión de Android</strong> y el <strong>idioma</strong> en el que la usas. No guardamos el modelo del móvil ni ningún identificador del dispositivo. No hace falta cuenta.</p>
+    <p>Los avisos y las actividades publicadas le llegan a Javier como incidencias en un repositorio privado de GitHub, con el identificador interno de la cuenta cuando lo hay. <strong>El correo no se incluye nunca.</strong></p>
+
+    <h3>Añadir al calendario</h3>
+    <p>Esta opción abre tu aplicación de calendario con la actividad ya rellenada y eres tú quien decide si la guarda. La app <strong>no pide permiso para acceder al calendario</strong> y no puede leer nada de él.</p>
+
+    <h3>Datos guardados en el móvil</h3>
+    <p>La app guarda en tu teléfono la agenda descargada (para funcionar sin conexión), tus favoritos, el idioma elegido y la sesión abierta. Borrar los datos de la app o desinstalarla lo elimina todo del móvil.</p>
+
+    <h2>Traducción al castellano</h2>
+    <p>Las actividades se publican en catalán y la versión en castellano la preparamos nosotros antes de que llegue a la app: el texto de las actividades (título, descripción y precio) se envía a <strong>Google Cloud Translation</strong> y se guarda ya traducido. <strong>Esto incluye las actividades que publicas tú</strong>, pero ningún dato de tu cuenta: a Google solo le llega el texto de la actividad. Cambiar de idioma en la app no envía nada a ningún sitio.</p>
+
+    <h2>Publicidad y compra "Sin anuncios"</h2>
+    <p>Este apartado se aplica a las versiones de la app que muestren publicidad.</p>
+    <p>La app puede mostrar un banner de <strong>Google AdMob</strong> en el modo de anuncios limitados, pensado para mostrar anuncios <strong>no personalizados</strong>: no se usa tu historial ni lo que haces dentro de la app para elegir el anuncio. Aun así, para servir el anuncio, limitar su frecuencia y prevenir el fraude, Google puede recibir datos técnicos como la dirección IP e información del dispositivo. Cuando la normativa lo exige, la app te pide el consentimiento con el formulario de Google antes de cargar ningún anuncio, y puedes cambiarlo después. Puedes restablecer o eliminar el identificador de publicidad en los ajustes de Android. Más información: <a href="https://policies.google.com/technologies/ads" rel="noopener">cómo usa Google los datos en la publicidad</a>.</p>
+    <p>La compra "Sin anuncios" es un pago único gestionado íntegramente por <strong>Google Play</strong>. La app solo consulta a Google Play si la has hecho; nosotros no vemos ni guardamos ningún dato de pago.</p>
+
+    <h2>Qué NO hacemos</h2>
+    <ul>
+      <li>No usamos herramientas de analítica ni de seguimiento de lo que haces en la app.</li>
+      <li>No recogemos tu ubicación.</li>
+      <li>No vendemos datos ni los cedemos a nadie con fines comerciales.</li>
+    </ul>
+
+    <h2>Quién los trata por nosotros</h2>
+    <ul>
+      <li><strong>Supabase</strong>: base de datos e inicio de sesión. Los datos se guardan en la Unión Europea (Irlanda). Como cualquier servicio en internet, conserva registros técnicos (como la dirección IP) durante un tiempo limitado por seguridad.</li>
+      <li><strong>Google</strong>: inicio de sesión con la cuenta de Google, traducción del texto de las actividades y, en las versiones con publicidad, AdMob y Google Play.</li>
+      <li><strong>GitHub</strong>: repositorio privado al que llegan los avisos y las actividades publicadas, sin ningún correo.</li>
+    </ul>
+    <p>Algunos de estos proveedores pueden tratar datos fuera de la Unión Europea; lo hacen con las garantías que prevé el Reglamento General de Protección de Datos. Todas las conexiones entre la app y los servidores van cifradas.</p>
+
+    <h2>Base legal</h2>
+    <ul>
+      <li>Cuenta, favoritos, recordatorios, publicación y avisos: prestarte el servicio que tú pides.</li>
+      <li>Traducción, moderación de las actividades publicadas y seguridad: interés legítimo en ofrecer una agenda fiable en los dos idiomas.</li>
+      <li>Publicidad: tu consentimiento, cuando la normativa lo exige.</li>
+    </ul>
+
+    <h2>Cuánto tiempo los guardamos</h2>
+    <ul>
+      <li>Cuenta: hasta que pidas eliminarla.</li>
+      <li>Favoritos: hasta una semana después de la actividad.</li>
+      <li>Actividades publicadas: hasta que las borres o elimines la cuenta.</li>
+      <li>Avisos: el tiempo necesario para revisarlos y resolverlos.</li>
+    </ul>
+
+    <h2>Tus derechos</h2>
+    <p>Puedes pedir acceder a tus datos, rectificarlos, eliminarlos, limitar u oponerte a su tratamiento y obtener una copia, escribiendo a <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>. Si crees que no se han respetado, puedes presentar una reclamación ante la <a href="https://www.aepd.es" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
+
+    <h2 id="eliminar-cuenta">Eliminar tu cuenta y tus datos</h2>
+    <div class="box">
+      <p>Escribe a <a href="mailto:agendaponent.runny812@passinbox.com?subject=Eliminar%20cuenta">agendaponent.runny812@passinbox.com</a> desde el correo de la cuenta de Google con la que entraste, con el asunto "Eliminar cuenta". No hace falta tener la app instalada.</p>
+      <p>Eliminaremos la cuenta, los favoritos y las actividades que hayas publicado en un plazo máximo de un mes, y te lo confirmaremos por correo. Los datos guardados en el móvil se borran desinstalando la app.</p>
+    </div>
+
+    <h2>Edad</h2>
+    <p>La aplicación está pensada para personas de <strong>13 años o más</strong> y no se dirige a menores de 13 años. Consultar la agenda no requiere ningún dato. Para crear una cuenta hay que tener 14 años; si tienes menos, hace falta el consentimiento de tus padres o tutores.</p>
+
+    <h2>Enlaces a otras webs</h2>
+    <p>Muchas actividades enlazan a la página de su fuente (ayuntamientos, la Generalitat…). Al abrirlas pasas a una web ajena, con su propia política de privacidad.</p>
+
+    <h2>Cambios en esta política</h2>
+    <p>Si cambia, publicaremos la versión nueva en esta misma dirección con la fecha actualizada. Si el cambio afecta a los datos que ya tenemos, te lo haremos saber antes de aplicarlo.</p>
+  </section>
+
+  <footer>
+    Agenda Ponent · Javier Guerrero Moreno · <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>
+  </footer>
+</div>
+
+<script>
+  // Con JavaScript se enseña un idioma cada vez; sin él se ven los dos.
+  document.documentElement.classList.add('js');
+  document.querySelector('.lang-toggle').hidden = false;
+  function showLang(lang) {
+    ['ca', 'es'].forEach(function (l) {
+      document.getElementById(l).classList.toggle('active', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+    });
+  }
+  // Los anclajes de borrado de cuenta abren el idioma que les toca: son
+  // los enlaces que se dan en Play Console.
+  function focusFromHash() {
+    var id = location.hash.slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var section = el.closest('section');
+    if (section) showLang(section.id);
+    requestAnimationFrame(function () { el.scrollIntoView({ block: 'start' }); });
+  }
+  focusFromHash();
+  window.addEventListener('hashchange', focusFromHash);
+</script>
+</html>
