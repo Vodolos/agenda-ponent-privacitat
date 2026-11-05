@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Condicions d'ús de l'aplicació Agenda Ponent.">
+<title>Condicions d'ús — Agenda Ponent</title>
+<style>
+  :root {
+    --bg: #FBF7F0;
+    --text: #2B2320;
+    --muted: #6B6058;
+    --accent: #B03D0C;
+    --card: #FFFFFF;
+    --border: #E7DFD3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1C1613;
+      --text: #F2E9DC;
+      --muted: #B8AA9A;
+      --accent: #F2A65A;
+      --card: #26201C;
+      --border: #3A312B;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1C1613;
+    --text: #F2E9DC;
+    --muted: #B8AA9A;
+    --accent: #F2A65A;
+    --card: #26201C;
+    --border: #3A312B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 96px; }
+  header { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 2px solid var(--accent); }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; }
+  .version { color: var(--muted); font-size: 0.9rem; font-family: system-ui, -apple-system, sans-serif; }
+  .lang-toggle { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; font-family: system-ui, -apple-system, sans-serif; }
+  .lang-toggle button {
+    background: var(--card); border: 1px solid var(--border); color: var(--text);
+    padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--accent); color: #FFF6EA; border-color: var(--accent); }
+  /* Sin JavaScript se ven los dos idiomas: estas condiciones tienen que
+     poder leerse siempre, también desde el lector que use Google al
+     revisarlas. */
+  .js section { display: none; }
+  .js section.active { display: block; }
+  section + section { margin-top: 48px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; color: var(--accent); scroll-margin-top: 24px; }
+  p, li { word-break: break-word; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .box {
+    margin-top: 8px; padding: 14px 16px; background: var(--card);
+    border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 4px;
+  }
+  .box p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.85rem; font-family: system-ui, -apple-system, sans-serif;
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Condicions d'ús · Condiciones de uso</h1>
+    <div class="version">Agenda Ponent · Versió 1 · 05-11-2026</div>
+    <div class="lang-toggle" hidden>
+      <button type="button" id="btn-ca" class="active" onclick="showLang('ca')">Català</button>
+      <button type="button" id="btn-es" onclick="showLang('es')">Castellano</button>
+    </div>
+  </header>
+
+  <section id="ca" lang="ca" class="active">
+    <p><strong>Agenda Ponent</strong> és una aplicació per a Android que recull en un sol lloc l'agenda d'activitats del Segrià, el Pla d'Urgell, la Noguera i l'Urgell. En instal·lar-la i fer-la servir acceptes aquestes condicions.</p>
+
+    <h2>Qui hi ha darrere</h2>
+    <p>Javier Guerrero Moreno, que desenvolupa l'aplicació a títol personal. Contacte: <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>.</p>
+    <p>Agenda Ponent <strong>no està afiliada, associada ni autoritzada per cap ajuntament, per la Generalitat de Catalunya ni per cap altre organisme públic</strong>, i no els representa ni ofereix cap tràmit o servei oficial en nom seu.</p>
+
+    <h2>Què fa l'aplicació</h2>
+    <p>Llegeix diverses vegades al dia les agendes que organismes públics i entitats publiquen a les seves webs, i les ensenya juntes. Cada activitat porta l'enllaç a la seva font.</p>
+    <p>La informació és de qui la publica, no nostra: <strong>els horaris, els preus i els llocs poden canviar o ser equivocats a l'origen</strong>. Abans de desplaçar-te, confirma-ho amb l'organitzador. Si hi veus un error, avisa'ns des del botó de la mateixa activitat i el corregirem.</p>
+    <p>Quan la font no publica el preu o l'hora, l'aplicació ho diu; no ho suposa.</p>
+
+    <h2>El compte</h2>
+    <p>Per consultar l'agenda no cal compte. Només en cal per desar preferides i per publicar activitats, i s'obre amb Google: no hi ha contrasenya.</p>
+    <p>Pots eliminar el compte quan vulguis des de <em>El meu compte</em>. S'esborren el compte, les preferides i les activitats que hagis publicat. També pots demanar-ho per correu.</p>
+    <p>Podem tancar o suspendre un compte que incompleixi aquestes condicions de manera greu o repetida. T'ho direm i et direm per què.</p>
+
+    <h2>El que publiques tu</h2>
+    <p>Qualsevol persona amb compte pot publicar una activitat oberta al públic de les quatre comarques. <strong>Cada activitat la revisa una persona abans que es vegi</strong>, i mentrestant només la veus tu.</p>
+    <p>No s'hi pot publicar:</p>
+    <ul>
+      <li>Contingut que insulti, amenaci o inciti a l'odi contra algú, ni contra cap grup per l'origen, la llengua, la religió, el sexe, l'orientació, la identitat o la discapacitat.</li>
+      <li>Contingut que atempti contra els drets i les llibertats de les persones.</li>
+      <li>Contingut sexual, violent o no apte per a tots els públics.</li>
+      <li>Publicitat, propaganda ni missatges repetits.</li>
+      <li>Dades personals d'altra gent: telèfons, adreces particulars o fotografies sense permís.</li>
+      <li>Informació falsa o activitats que no existeixen.</li>
+    </ul>
+    <p>El que no ho compleixi no es publicarà, i rebràs un avís explicant el motiu. El que ja sigui visible es pot retirar si després es veu que incompleix alguna d'aquestes regles.</p>
+    <p>En publicar una activitat ens dones permís per ensenyar-la dins l'aplicació —text i imatge, també traduïts al castellà— mentre la tinguis publicada. El contingut continua sent teu i el pots esborrar quan vulguis. Has de tenir dret a publicar el que publiques: si puges un cartell, ha de ser material de difusió que puguis difondre.</p>
+
+    <h2>Preu i compra</h2>
+    <p>L'aplicació és <strong>gratuïta</strong> i se sosté amb una franja de publicitat al llistat. Abans de cap anunci et demanem el consentiment.</p>
+    <p>Hi ha una única compra opcional, <strong>"Sense anuncis"</strong>: un pagament únic, no una subscripció, que treu la publicitat per sempre. El preu és el que mostri Google Play al teu país, impostos inclosos.</p>
+    <p>El cobrament el gestiona <strong>Google Play</strong>, no nosaltres: nosaltres no veiem ni guardem cap dada de pagament. La compra queda lligada al teu compte de Google, així que si canvies de mòbil o reinstal·les l'aplicació la recuperes.</p>
+    <div class="box">
+      <p><strong>Devolucions.</strong> Si vius a l'Espai Econòmic Europeu o al Regne Unit tens <strong>14 dies</strong> per desistir de la compra. Pots demanar-ho a <a href="https://support.google.com/googleplay/answer/2479637">Google Play</a> o escriure'ns a <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>: dins d'aquests 14 dies et tornarem els diners sense demanar explicacions. Passat aquest termini, escriu-nos igualment si creus que hi ha hagut un error i ho mirarem.</p>
+    </div>
+
+    <h2>Edat</h2>
+    <p>L'aplicació és apta per a tots els públics, però per obrir un compte i publicar cal tenir <strong>14 anys o més</strong>; amb menys, el consentiment dels teus pares o tutors.</p>
+
+    <h2>Disponibilitat</h2>
+    <p>Això és un projecte personal, sense cap empresa al darrere. Pot haver-hi talls, errors i estones en què una font no respongui. Podem canviar funcions de l'aplicació o deixar de mantenir-la; si algun dia s'atura del tot, ho direm amb antelació en aquesta mateixa adreça i a la fitxa de Google Play.</p>
+    <p>L'agenda es pot consultar sense connexió amb l'última informació descarregada, que pot no ser l'actual.</p>
+
+    <h2>Responsabilitat</h2>
+    <p>Responem dels danys que causem per incomplir aquestes condicions. <strong>No limitem res del que la llei no permet limitar</strong>: ni el dol, ni la negligència greu, ni els danys a la vida, la salut o la integritat de les persones, ni els drets que tens com a consumidor.</p>
+    <p>El que no podem assumir és el que decideix una altra persona: no responem de si una activitat se celebra, de com es desenvolupa, ni del que cobri o faci qui l'organitza.</p>
+
+    <h2>Les teves dades</h2>
+    <p>Què es recull i per què, en una pàgina a part: <a href="./">Política de privacitat</a>.</p>
+
+    <h2>Llei aplicable i reclamacions</h2>
+    <p>S'hi aplica la llei espanyola. Si ets consumidor, això no et treu la protecció de les normes imperatives del país on visquis, i pots reclamar davant els jutjats del teu domicili.</p>
+    <p>Abans de res, escriu-nos: la majoria de coses es resolen en un correu.</p>
+
+    <h2>Canvis</h2>
+    <p>Si aquestes condicions canvien, publicarem la versió nova en aquesta mateixa adreça amb la data actualitzada. Els canvis importants els avisarem dins l'aplicació.</p>
+  </section>
+
+  <section id="es" lang="es">
+    <p><strong>Agenda Ponent</strong> es una aplicación para Android que reúne en un solo lugar la agenda de actividades del Segrià, el Pla d'Urgell, la Noguera y el Urgell. Al instalarla y usarla aceptas estas condiciones.</p>
+
+    <h2>Quién está detrás</h2>
+    <p>Javier Guerrero Moreno, que desarrolla la aplicación a título personal. Contacto: <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>.</p>
+    <p>Agenda Ponent <strong>no está afiliada, asociada ni autorizada por ningún ayuntamiento, por la Generalitat de Catalunya ni por ningún otro organismo público</strong>, y no los representa ni ofrece ningún trámite o servicio oficial en su nombre.</p>
+
+    <h2>Qué hace la aplicación</h2>
+    <p>Lee varias veces al día las agendas que organismos públicos y entidades publican en sus webs, y las enseña juntas. Cada actividad lleva el enlace a su fuente.</p>
+    <p>La información es de quien la publica, no nuestra: <strong>los horarios, los precios y los lugares pueden cambiar o estar equivocados en el origen</strong>. Antes de desplazarte, confírmalo con el organizador. Si ves un error, avísanos desde el botón de la propia actividad y lo corregiremos.</p>
+    <p>Cuando la fuente no publica el precio o la hora, la aplicación lo dice; no lo supone.</p>
+
+    <h2>La cuenta</h2>
+    <p>Para consultar la agenda no hace falta cuenta. Solo se necesita para guardar favoritas y para publicar actividades, y se abre con Google: no hay contraseña.</p>
+    <p>Puedes eliminar la cuenta cuando quieras desde <em>Mi cuenta</em>. Se borran la cuenta, las favoritas y las actividades que hayas publicado. También puedes pedirlo por correo.</p>
+    <p>Podemos cerrar o suspender una cuenta que incumpla estas condiciones de forma grave o repetida. Te lo diremos y te diremos por qué.</p>
+
+    <h2>Lo que publicas tú</h2>
+    <p>Cualquier persona con cuenta puede publicar una actividad abierta al público de las cuatro comarcas. <strong>Cada actividad la revisa una persona antes de que se vea</strong>, y mientras tanto solo la ves tú.</p>
+    <p>No se puede publicar:</p>
+    <ul>
+      <li>Contenido que insulte, amenace o incite al odio contra alguien, ni contra ningún grupo por el origen, la lengua, la religión, el sexo, la orientación, la identidad o la discapacidad.</li>
+      <li>Contenido que atente contra los derechos y las libertades de las personas.</li>
+      <li>Contenido sexual, violento o no apto para todos los públicos.</li>
+      <li>Publicidad, propaganda ni mensajes repetidos.</li>
+      <li>Datos personales de otras personas: teléfonos, direcciones particulares o fotografías sin permiso.</li>
+      <li>Información falsa o actividades que no existen.</li>
+    </ul>
+    <p>Lo que no lo cumpla no se publicará, y recibirás un aviso explicando el motivo. Lo que ya sea visible se puede retirar si después se ve que incumple alguna de estas reglas.</p>
+    <p>Al publicar una actividad nos das permiso para enseñarla dentro de la aplicación —texto e imagen, también traducidos al castellano— mientras la tengas publicada. El contenido sigue siendo tuyo y puedes borrarlo cuando quieras. Tienes que tener derecho a publicar lo que publicas: si subes un cartel, debe ser material de difusión que puedas difundir.</p>
+
+    <h2>Precio y compra</h2>
+    <p>La aplicación es <strong>gratuita</strong> y se sostiene con una franja de publicidad en el listado. Antes de ningún anuncio te pedimos el consentimiento.</p>
+    <p>Hay una única compra opcional, <strong>"Sin anuncios"</strong>: un pago único, no una suscripción, que quita la publicidad para siempre. El precio es el que muestre Google Play en tu país, impuestos incluidos.</p>
+    <p>El cobro lo gestiona <strong>Google Play</strong>, no nosotros: nosotros no vemos ni guardamos ningún dato de pago. La compra queda ligada a tu cuenta de Google, así que si cambias de móvil o reinstalas la aplicación la recuperas.</p>
+    <div class="box">
+      <p><strong>Devoluciones.</strong> Si vives en el Espacio Económico Europeo o en el Reino Unido tienes <strong>14 días</strong> para desistir de la compra. Puedes pedirlo en <a href="https://support.google.com/googleplay/answer/2479637">Google Play</a> o escribirnos a <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>: dentro de esos 14 días te devolveremos el dinero sin pedir explicaciones. Pasado ese plazo, escríbenos igualmente si crees que ha habido un error y lo miraremos.</p>
+    </div>
+
+    <h2>Edad</h2>
+    <p>La aplicación es apta para todos los públicos, pero para abrir una cuenta y publicar hay que tener <strong>14 años o más</strong>; con menos, el consentimiento de tus padres o tutores.</p>
+
+    <h2>Disponibilidad</h2>
+    <p>Esto es un proyecto personal, sin ninguna empresa detrás. Puede haber cortes, errores y ratos en los que una fuente no responda. Podemos cambiar funciones de la aplicación o dejar de mantenerla; si algún día se para del todo, lo diremos con antelación en esta misma dirección y en la ficha de Google Play.</p>
+    <p>La agenda se puede consultar sin conexión con la última información descargada, que puede no ser la actual.</p>
+
+    <h2>Responsabilidad</h2>
+    <p>Respondemos de los daños que causemos por incumplir estas condiciones. <strong>No limitamos nada de lo que la ley no permite limitar</strong>: ni el dolo, ni la negligencia grave, ni los daños a la vida, la salud o la integridad de las personas, ni los derechos que tienes como consumidor.</p>
+    <p>Lo que no podemos asumir es lo que decide otra persona: no respondemos de si una actividad se celebra, de cómo se desarrolla, ni de lo que cobre o haga quien la organiza.</p>
+
+    <h2>Tus datos</h2>
+    <p>Qué se recoge y para qué, en una página aparte: <a href="./">Política de privacidad</a>.</p>
+
+    <h2>Ley aplicable y reclamaciones</h2>
+    <p>Se aplica la ley española. Si eres consumidor, esto no te quita la protección de las normas imperativas del país donde vivas, y puedes reclamar ante los juzgados de tu domicilio.</p>
+    <p>Antes de nada, escríbenos: la mayoría de las cosas se resuelven en un correo.</p>
+
+    <h2>Cambios</h2>
+    <p>Si estas condiciones cambian, publicaremos la versión nueva en esta misma dirección con la fecha actualizada. Los cambios importantes los avisaremos dentro de la aplicación.</p>
+  </section>
+
+  <footer>
+    Agenda Ponent · Javier Guerrero Moreno · <a href="mailto:agendaponent.runny812@passinbox.com">agendaponent.runny812@passinbox.com</a>
+  </footer>
+</div>
+
+<script>
+  // Con JavaScript se enseña un idioma cada vez; sin él se ven los dos.
+  document.documentElement.classList.add('js');
+  document.querySelector('.lang-toggle').hidden = false;
+  function showLang(lang) {
+    ['ca', 'es'].forEach(function (l) {
+      document.getElementById(l).classList.toggle('active', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+    });
+  }
+</script>
+</html>
